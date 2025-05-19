@@ -1,6 +1,11 @@
 @import url('global.css');
 
+h1, h2 {
+  font-family: var(--font-family-secondary);
+}
+
 h3 {
+  font-family: var(--font-family-secondary);
   margin-bottom: 0.75rem;
 }
 
@@ -13,7 +18,7 @@ p {
 }
 
 header {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 body {
@@ -27,6 +32,14 @@ main {
   height: 65vh;
 }
 
+main::before, main::after {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--secondary-white);
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
 #projects {
   width: 100%;
   padding: 1rem;
@@ -38,7 +51,6 @@ main {
   padding: 1rem;
   margin: 1rem auto;
   width: 100%;
-  border-radius: 0.25rem;
   box-shadow: var(--shadow-medium);
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -61,8 +73,33 @@ footer {
   padding: 1rem;
 }
 
+footer p {
+  font-family: var(--font-family-secondary);
+}
+
+br {
+  display: none;
+}
+
 @media screen and (max-width: 48rem) {
+  header {
+  padding: 1rem;
+  }
+  
   body {
     width: 100%;
+  }
+
+  h1 {
+    line-height: var(--line-height-extra-tight);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  br {
+    display: block;
   }
 }
